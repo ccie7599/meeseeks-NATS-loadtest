@@ -24,14 +24,6 @@
         "env": []
     },
     {
-        "id": "4065bf38b46f3f49",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "bb57a429bedabd77",
         "type": "tab",
         "label": "publish client",
@@ -305,6 +297,101 @@
         "hb": "30"
     },
     {
+        "id": "e432a63436899760",
+        "type": "natsio-server",
+        "name": "",
+        "host": "192.168.1.105",
+        "port": "4222",
+        "json": true
+    },
+    {
+        "id": "b9d7a5a759ecc028",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "nats.edge-cloud.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a319270fd872e556",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "97.107.140.214",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c61391b55213e115",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "172.104.125.99",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
         "id": "7fd7ee0be984bd15",
         "type": "http in",
         "z": "48b4356fe2e4f9db",
@@ -328,8 +415,8 @@
         "name": "Return Retained message on {sku} topic to API consumer",
         "statusCode": "",
         "headers": {},
-        "x": 830,
-        "y": 360,
+        "x": 250,
+        "y": 320,
         "wires": []
     },
     {
@@ -339,8 +426,8 @@
         "name": "",
         "server": "cbee2f0fcd121e2d",
         "client": "",
-        "x": 480,
-        "y": 600,
+        "x": 400,
+        "y": 540,
         "wires": []
     },
     {
@@ -356,24 +443,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "d24ceebd3c56223f",
-        "type": "debug",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 420,
+        "x": 670,
+        "y": 180,
         "wires": []
     },
     {
@@ -384,13 +455,13 @@
         "topic": "demo/api/stream/#",
         "qos": "2",
         "datatype": "json",
-        "broker": "c0d8752cab84aea3",
+        "broker": "b9d7a5a759ecc028",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 300,
+        "x": 170,
+        "y": 500,
         "wires": [
             [
                 "e4ef548d6b8d59bf",
@@ -411,8 +482,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 210,
-        "y": 620,
+        "x": 350,
+        "y": 600,
         "wires": []
     },
     {
@@ -425,8 +496,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 220,
-        "y": 540,
+        "x": 140,
+        "y": 600,
         "wires": [
             [
                 "683335b90068e1e5"
@@ -444,8 +515,8 @@
         "syntax": "mustache",
         "template": "/data/msg/{{payload.key}}",
         "output": "str",
-        "x": 180,
-        "y": 460,
+        "x": 140,
+        "y": 560,
         "wires": [
             [
                 "71fc67cc1d2c1698"
@@ -463,8 +534,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 600,
-        "y": 60,
+        "x": 320,
+        "y": 140,
         "wires": [
             [
                 "aec7abb9cc02c7ac",
@@ -483,8 +554,8 @@
         "syntax": "mustache",
         "template": "/data/msg/{{payload.key}}",
         "output": "str",
-        "x": 140,
-        "y": 180,
+        "x": 80,
+        "y": 120,
         "wires": [
             [
                 "6839a47b1c370f7a"
@@ -504,8 +575,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 20,
+        "x": 670,
+        "y": 140,
         "wires": []
     },
     {
@@ -520,7 +591,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 370,
+        "x": 70,
         "y": 160,
         "wires": [
             [
@@ -558,12 +629,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 280,
+        "x": 80,
+        "y": 220,
         "wires": [
             [
-                "067a9ae216cf5cb1",
-                "d24ceebd3c56223f"
+                "067a9ae216cf5cb1"
             ]
         ]
     },
@@ -593,7 +663,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 340,
         "y": 220,
         "wires": [
             [
@@ -609,8 +679,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 640,
-        "y": 140,
+        "x": 310,
+        "y": 180,
         "wires": [
             [
                 "4201c19b11abba31",
@@ -637,8 +707,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 170,
-        "y": 100,
+        "x": 110,
+        "y": 80,
         "wires": [
             [
                 "f02b4941ee65e3e1"
@@ -664,8 +734,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 350,
-        "y": 380,
+        "x": 450,
+        "y": 500,
         "wires": [
             [
                 "70f06812bfa289ce"
@@ -681,8 +751,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 240,
+        "x": 130,
+        "y": 80,
         "wires": [
             [
                 "1c812942b8d87c64",
@@ -697,8 +767,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 810,
-        "y": 280,
+        "x": 610,
+        "y": 200,
         "wires": []
     },
     {
@@ -714,9 +784,9 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "c0d8752cab84aea3",
-        "x": 770,
-        "y": 120,
+        "broker": "b9d7a5a759ecc028",
+        "x": 110,
+        "y": 260,
         "wires": []
     },
     {
@@ -732,8 +802,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 400,
+        "x": 470,
+        "y": 160,
         "wires": []
     },
     {
@@ -749,8 +819,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 390,
-        "y": 160,
+        "x": 470,
+        "y": 80,
         "wires": []
     },
     {
@@ -764,8 +834,8 @@
         "syntax": "mustache",
         "template": "demo/api/stream/{{payload.key}}",
         "output": "str",
-        "x": 360,
-        "y": 300,
+        "x": 120,
+        "y": 160,
         "wires": [
             [
                 "5eaf02a2a0dae3a4",
@@ -792,8 +862,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 270,
-        "y": 400,
+        "x": 190,
+        "y": 120,
         "wires": [
             [
                 "18870580aeb45b99"
@@ -819,8 +889,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 240,
+        "x": 200,
+        "y": 200,
         "wires": [
             [
                 "8a3182a40a08e3e1",
@@ -856,8 +926,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 160,
-        "y": 120,
+        "x": 110,
+        "y": 60,
         "wires": [
             [
                 "bce758247775ed53",
@@ -879,8 +949,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 450,
-        "y": 260,
+        "x": 130,
+        "y": 140,
         "wires": [
             [
                 "ed954cd86fb0608e",
@@ -893,7 +963,7 @@
         "type": "debug",
         "z": "fe87260a2a0e6208",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -901,7 +971,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 530,
         "y": 60,
         "wires": []
     },
@@ -910,7 +980,7 @@
         "type": "debug",
         "z": "fe87260a2a0e6208",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -918,8 +988,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 220,
+        "x": 530,
+        "y": 140,
         "wires": []
     },
     {
@@ -934,8 +1004,8 @@
         "label": "text",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 770,
-        "y": 480,
+        "x": 110,
+        "y": 260,
         "wires": []
     },
     {
@@ -946,7 +1016,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload.api.start",
+                "p": "api.start",
                 "pt": "msg",
                 "to": "",
                 "tot": "date"
@@ -957,8 +1027,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 250,
-        "y": 200,
+        "x": 150,
+        "y": 100,
         "wires": [
             [
                 "f00e7633ccde2d4d"
@@ -977,6 +1047,14 @@
                 "pt": "msg",
                 "to": "",
                 "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "payload.api.start",
+                "pt": "msg",
+                "to": "api.start",
+                "tot": "msg",
+                "dc": true
             }
         ],
         "action": "",
@@ -984,12 +1062,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 360,
+        "x": 140,
+        "y": 180,
         "wires": [
             [
-                "e2523516204da0f3",
-                "197ee78fd79f0cb2"
+                "197ee78fd79f0cb2",
+                "b2d0dab1d9e65d82"
             ]
         ]
     },
@@ -998,7 +1076,7 @@
         "type": "debug",
         "z": "fe87260a2a0e6208",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1006,8 +1084,45 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 320,
+        "x": 530,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b2d0dab1d9e65d82",
+        "type": "function",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "func": "var request = msg.payload.api.start\nvar received = msg.payload.api.complete\nmsg.payload.api.latency = received - request \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "e2523516204da0f3",
+                "092c377f318934b8"
+            ]
+        ]
+    },
+    {
+        "id": "092c377f318934b8",
+        "type": "debug",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 220,
         "wires": []
     },
     {
@@ -1024,8 +1139,8 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 470,
-        "y": 320,
+        "x": 150,
+        "y": 160,
         "wires": [
             [
                 "a30213c27f0166ad"
@@ -1068,8 +1183,8 @@
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
-        "x": 230,
-        "y": 100,
+        "x": 130,
+        "y": 80,
         "wires": [
             [
                 "f9755946d49691b9"
@@ -1095,8 +1210,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 350,
-        "y": 200,
+        "x": 210,
+        "y": 120,
         "wires": [
             [
                 "9e9c2b899fe9c55a",
@@ -1117,8 +1232,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 280,
+        "x": 610,
+        "y": 160,
         "wires": []
     },
     {
@@ -1134,8 +1249,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 180,
+        "x": 610,
+        "y": 120,
         "wires": []
     },
     {
@@ -1145,8 +1260,8 @@
         "name": "",
         "server": "",
         "client": "b803d1536177ccc3",
-        "x": 300,
-        "y": 120,
+        "x": 160,
+        "y": 60,
         "wires": [
             [
                 "a008d4951a83eddc"
@@ -1165,8 +1280,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 320,
+        "x": 450,
+        "y": 220,
         "wires": []
     },
     {
@@ -1177,8 +1292,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 530,
-        "y": 180,
+        "x": 90,
+        "y": 120,
         "wires": [
             [
                 "0903c46638f211e7"
@@ -1204,8 +1319,27 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 260,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "7bc6a8718f3cd290"
+            ]
+        ]
+    },
+    {
+        "id": "7bc6a8718f3cd290",
+        "type": "function",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "func": "var sent = msg.payload.ws.sent\nvar received = msg.payload.ws.received\nmsg.payload.ws.latency = received - sent \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 100,
+        "y": 220,
         "wires": [
             [
                 "baf5d10ac6201628"
