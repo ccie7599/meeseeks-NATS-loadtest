@@ -16,10 +16,26 @@
         "env": []
     },
     {
+        "id": "fe87260a2a0e6208",
+        "type": "tab",
+        "label": "Event Client ",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4065bf38b46f3f49",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3c9fafa.7dd6a5",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "demo.mqtttest.com",
+        "broker": "demo-na.mqtttest.com",
         "port": "8883",
         "tls": "2d748829.2503d8",
         "clientid": "$(CLIENTID)",
@@ -103,6 +119,121 @@
         "wholemsg": "false"
     },
     {
+        "id": "eb58dbee76747e0d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5914d7abbf8a72fb",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ade16b1ef95b9168",
+        "type": "ui_group",
+        "name": "API Client ",
+        "tab": "5914d7abbf8a72fb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "7fd7ee0be984bd15",
         "type": "http in",
         "z": "48b4356fe2e4f9db",
@@ -141,8 +272,8 @@
         "syntax": "mustache",
         "template": "demo/{{req.query.key}}",
         "output": "str",
-        "x": 340,
-        "y": 180,
+        "x": 320,
+        "y": 220,
         "wires": [
             [
                 "4e018abe66e05c5c",
@@ -157,14 +288,15 @@
         "name": "",
         "qos": "2",
         "datatype": "auto",
-        "unsubscribe-after-first-msg-recv": false,
+        "unsubscribe-after-first-msg-recv": true,
         "debug-subscribe": false,
         "broker": "3c9fafa.7dd6a5",
         "x": 530,
         "y": 100,
         "wires": [
             [
-                "ad081976cbe775b8"
+                "ad081976cbe775b8",
+                "bfa4154525709aa3"
             ]
         ]
     },
@@ -217,7 +349,8 @@
         "y": 300,
         "wires": [
             [
-                "067a9ae216cf5cb1"
+                "067a9ae216cf5cb1",
+                "63d1fdb5efef3abd"
             ]
         ]
     },
@@ -258,11 +391,80 @@
         "wires": []
     },
     {
-        "id": "e1e7fe4a355b94ee",
+        "id": "63d1fdb5efef3abd",
+        "type": "debug",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bfa4154525709aa3",
+        "type": "debug",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d24ceebd3c56223f",
+        "type": "debug",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ab26c3476126a8b6",
         "type": "mqtt in",
         "z": "48b4356fe2e4f9db",
         "name": "",
-        "topic": "demo/key1",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "3c9fafa.7dd6a5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "384b89c6e5f8a3eb",
+        "type": "mqtt in",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "topic": "demo/api/stream/#",
         "qos": "2",
         "datatype": "auto",
         "broker": "3c9fafa.7dd6a5",
@@ -270,13 +472,30 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 300,
-        "y": 540,
+        "x": 150,
+        "y": 400,
         "wires": [
             [
-                "70f06812bfa289ce"
+                "683335b90068e1e5"
             ]
         ]
+    },
+    {
+        "id": "683335b90068e1e5",
+        "type": "debug",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 230,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "5d02cd741e6b0fd7",
@@ -313,8 +532,8 @@
         "z": "4bdffad5d958d50f",
         "name": "",
         "topic": "",
-        "qos": "0",
-        "retain": "true",
+        "qos": "1",
+        "retain": "false",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
@@ -322,7 +541,7 @@
         "expiry": "",
         "broker": "3c9fafa.7dd6a5",
         "x": 610,
-        "y": 180,
+        "y": 160,
         "wires": []
     },
     {
@@ -368,7 +587,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "demo/{{req.query.key}}",
+        "template": "demo/api/stream/{{req.query.key}}",
         "output": "str",
         "x": 350,
         "y": 320,
@@ -379,5 +598,98 @@
                 "643a90a7d82c4fdd"
             ]
         ]
+    },
+    {
+        "id": "29ce28610c9e7d94",
+        "type": "ui_form",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "label": "",
+        "group": "ade16b1ef95b9168",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Request ",
+                "value": "key",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "key": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "f00e7633ccde2d4d",
+                "bce758247775ed53"
+            ]
+        ]
+    },
+    {
+        "id": "f00e7633ccde2d4d",
+        "type": "http request",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://127.0.0.1:1880/api",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "ed954cd86fb0608e"
+            ]
+        ]
+    },
+    {
+        "id": "bce758247775ed53",
+        "type": "debug",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ed954cd86fb0608e",
+        "type": "debug",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 220,
+        "wires": []
     }
 ]
