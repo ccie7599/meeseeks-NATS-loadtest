@@ -1,21 +1,5 @@
 [
     {
-        "id": "07533ae1fbb04e11",
-        "type": "tab",
-        "label": "Connector Service for Origin Events",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "1a2d207f770bfa25",
-        "type": "tab",
-        "label": "Realtime Event Push via pub/sub",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "48b4356fe2e4f9db",
         "type": "tab",
         "label": "Event API",
@@ -24,17 +8,9 @@
         "env": []
     },
     {
-        "id": "d7c53fda52da9707",
+        "id": "4bdffad5d958d50f",
         "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "702b81be6954a355",
-        "type": "tab",
-        "label": "Latency Reporter",
+        "label": "Event Publisher",
         "disabled": false,
         "info": "",
         "env": []
@@ -93,103 +69,6 @@
         "hidden": false
     },
     {
-        "id": "6230bf36a9b3038f",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "54f7ecc644f21e27",
         "type": "ui_group",
         "name": "Latency Results",
@@ -210,19 +89,6 @@
         "collapse": false
     },
     {
-        "id": "dc90f3d0.71392",
-        "type": "tls-config",
-        "name": "demo-na.mqtttest.com",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "demo-na.mqtttest.com",
-        "verifyservercert": true
-    },
-    {
         "id": "16e47346.ac956d",
         "type": "ui_tab",
         "name": "Real Time Event API",
@@ -231,314 +97,10 @@
         "hidden": false
     },
     {
-        "id": "4a829b544243102d",
-        "type": "redis-in",
-        "z": "07533ae1fbb04e11",
-        "server": "",
-        "command": "blpop",
-        "name": "Push from DB",
-        "topic": "",
-        "obj": true,
-        "timeout": 0,
-        "x": 130,
-        "y": 80,
-        "wires": [
-            [
-                "1b1486aa54c3e87f"
-            ]
-        ]
-    },
-    {
-        "id": "1b1486aa54c3e87f",
-        "type": "mqtt out",
-        "z": "07533ae1fbb04e11",
-        "name": "Publish Real-time updates to data broker",
-        "topic": "demo/cdi/race",
-        "qos": "",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "3c9fafa.7dd6a5",
-        "x": 660,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c0fb0a89f4c3cfc3",
-        "type": "kafka-consumer",
-        "z": "07533ae1fbb04e11",
-        "outOfRangeOffset": "earliest",
-        "fromOffset": "latest",
-        "x": 120,
-        "y": 140,
-        "wires": [
-            [
-                "1b1486aa54c3e87f"
-            ]
-        ]
-    },
-    {
-        "id": "811fdc459da8180c",
-        "type": "inject",
-        "z": "07533ae1fbb04e11",
-        "name": "Inject new odds every second",
-        "props": [
-            {
-                "p": "payload.timestamp",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 170,
-        "y": 180,
-        "wires": [
-            [
-                "f63c277a21555427"
-            ]
-        ]
-    },
-    {
-        "id": "879fd984aa5242ac",
-        "type": "template",
-        "z": "07533ae1fbb04e11",
-        "name": "Format json payload",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\"event\":\"sample race 1\",\"odds\":\"{{payload.random}}\"}",
-        "output": "json",
-        "x": 140,
-        "y": 260,
-        "wires": [
-            [
-                "46009b379250fc83"
-            ]
-        ]
-    },
-    {
-        "id": "f63c277a21555427",
-        "type": "random",
-        "z": "07533ae1fbb04e11",
-        "name": "Generate Random Odds",
-        "low": 1,
-        "high": "100",
-        "inte": "false",
-        "property": "payload.random",
-        "x": 150,
-        "y": 220,
-        "wires": [
-            [
-                "879fd984aa5242ac"
-            ]
-        ]
-    },
-    {
-        "id": "b92ab906bcd30148",
-        "type": "debug",
-        "z": "07533ae1fbb04e11",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "46009b379250fc83",
-        "type": "function",
-        "z": "07533ae1fbb04e11",
-        "name": "Add timestamp for latency reporting",
-        "func": "var now = Date.now();\nmsg.payload.timestamp = now\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 190,
-        "y": 300,
-        "wires": [
-            [
-                "b92ab906bcd30148",
-                "1b1486aa54c3e87f"
-            ]
-        ]
-    },
-    {
-        "id": "f304ab4ff03427e3",
-        "type": "mqtt in",
-        "z": "1a2d207f770bfa25",
-        "name": "Subscribe to pub/sub events for Race ID",
-        "topic": "demo/cdi/race",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "3c9fafa.7dd6a5",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 180,
-        "y": 80,
-        "wires": [
-            [
-                "df2e46f4a2a3d048",
-                "be63f89e2e43d2ef",
-                "57a7f8393a9d38d3",
-                "a207e6fcb76eceda",
-                "6fd5a39d6fde32a7",
-                "b3a027e2c3f8a6e2"
-            ]
-        ]
-    },
-    {
-        "id": "df2e46f4a2a3d048",
-        "type": "file",
-        "z": "1a2d207f770bfa25",
-        "name": "",
-        "filename": "/data/racedata",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 590,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "be63f89e2e43d2ef",
-        "type": "debug",
-        "z": "1a2d207f770bfa25",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "57a7f8393a9d38d3",
-        "type": "ui_text",
-        "z": "1a2d207f770bfa25",
-        "group": "a5ecdab7.7197d8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Event Name",
-        "format": "{{msg.payload.event}}",
-        "layout": "row-spread",
-        "x": 610,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "b3a027e2c3f8a6e2",
-        "type": "function",
-        "z": "1a2d207f770bfa25",
-        "name": "Calculate Latency",
-        "func": "msg.payload.timestamp = Number(msg.payload.timestamp);\nvar now = Date.now();\nvar then = msg.payload.timestamp;\nmsg.payload.latency = now - then;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 240,
-        "wires": [
-            [
-                "8c862b9278f2a3c9",
-                "dc2aebb19b9c5c3e"
-            ]
-        ]
-    },
-    {
-        "id": "a207e6fcb76eceda",
-        "type": "ui_text",
-        "z": "1a2d207f770bfa25",
-        "group": "a5ecdab7.7197d8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Event Odds",
-        "format": "{{msg.payload.odds}}",
-        "layout": "row-spread",
-        "x": 610,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "6fd5a39d6fde32a7",
-        "type": "ui_text",
-        "z": "1a2d207f770bfa25",
-        "group": "a5ecdab7.7197d8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Message Timestamp",
-        "format": "{{msg.payload.timestamp}}",
-        "layout": "row-spread",
-        "x": 640,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "8c862b9278f2a3c9",
-        "type": "ui_text",
-        "z": "1a2d207f770bfa25",
-        "group": "a5ecdab7.7197d8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Message Latency",
-        "format": "{{msg.payload.latency}}",
-        "layout": "row-spread",
-        "x": 630,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "dc2aebb19b9c5c3e",
-        "type": "mqtt out",
-        "z": "1a2d207f770bfa25",
-        "name": "Publish Latency Results to data broker",
-        "topic": "demo/cdi/latency",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "3c9fafa.7dd6a5",
-        "x": 610,
-        "y": 380,
-        "wires": []
+        "id": "cbee2f0fcd121e2d",
+        "type": "websocket-listener",
+        "path": "/ws",
+        "wholemsg": "false"
     },
     {
         "id": "7fd7ee0be984bd15",
@@ -549,11 +111,11 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 100,
-        "y": 60,
+        "x": 200,
+        "y": 100,
         "wires": [
             [
-                "345a2fb2629a2e12"
+                "1ce77331fe4dddfd"
             ]
         ]
     },
@@ -564,104 +126,59 @@
         "name": "Return Retained message on {sku} topic to API consumer",
         "statusCode": "",
         "headers": {},
-        "x": 250,
-        "y": 140,
+        "x": 650,
+        "y": 460,
         "wires": []
     },
     {
-        "id": "345a2fb2629a2e12",
-        "type": "file in",
+        "id": "1ce77331fe4dddfd",
+        "type": "template",
         "z": "48b4356fe2e4f9db",
         "name": "",
-        "filename": "/data/racedata",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 120,
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "demo/{{req.query.key}}",
+        "output": "str",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "4e018abe66e05c5c",
+                "7c6ec78e3ac4bac7"
+            ]
+        ]
+    },
+    {
+        "id": "4e018abe66e05c5c",
+        "type": "mqtt-in-dynamicsub",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "qos": "2",
+        "datatype": "auto",
+        "unsubscribe-after-first-msg-recv": false,
+        "debug-subscribe": false,
+        "broker": "3c9fafa.7dd6a5",
+        "x": 530,
         "y": 100,
         "wires": [
             [
-                "067a9ae216cf5cb1"
+                "ad081976cbe775b8"
             ]
         ]
     },
     {
-        "id": "e4432b4e17744c42",
-        "type": "mqtt in",
-        "z": "702b81be6954a355",
-        "name": "Subscribe to Latency feed from data broker",
-        "topic": "demo/cdi/latency",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "3c9fafa.7dd6a5",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 290,
-        "y": 160,
-        "wires": [
-            [
-                "2df26958a2fcc877"
-            ]
-        ]
-    },
-    {
-        "id": "cabbd6d8a5c54c0c",
-        "type": "ui_chart",
-        "z": "702b81be6954a355",
-        "name": "Publish-to-Subscribe Latency Results",
-        "group": "54f7ecc644f21e27",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "label": "Publish-to-Subscribe Latency Results",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 510,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2df26958a2fcc877",
+        "id": "ad081976cbe775b8",
         "type": "change",
-        "z": "702b81be6954a355",
+        "z": "48b4356fe2e4f9db",
         "name": "",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
-                "pt": "msg",
-                "to": "payload.latency",
+                "pt": "flow",
+                "to": "payload",
                 "tot": "msg"
             }
         ],
@@ -670,11 +187,196 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
-        "y": 280,
+        "x": 740,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63f77552655cb5ea",
+        "type": "change",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "flow",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 300,
         "wires": [
             [
-                "cabbd6d8a5c54c0c"
+                "067a9ae216cf5cb1"
+            ]
+        ]
+    },
+    {
+        "id": "7c6ec78e3ac4bac7",
+        "type": "delay",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "63f77552655cb5ea"
+            ]
+        ]
+    },
+    {
+        "id": "70f06812bfa289ce",
+        "type": "websocket out",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "server": "cbee2f0fcd121e2d",
+        "client": "",
+        "x": 540,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e1e7fe4a355b94ee",
+        "type": "mqtt in",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "topic": "demo/key1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "3c9fafa.7dd6a5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "70f06812bfa289ce"
+            ]
+        ]
+    },
+    {
+        "id": "5d02cd741e6b0fd7",
+        "type": "http in",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "url": "/post",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "1c812942b8d87c64",
+                "18870580aeb45b99"
+            ]
+        ]
+    },
+    {
+        "id": "643a90a7d82c4fdd",
+        "type": "http response",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8a3182a40a08e3e1",
+        "type": "mqtt out",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c9fafa.7dd6a5",
+        "x": 610,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5eaf02a2a0dae3a4",
+        "type": "debug",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1c812942b8d87c64",
+        "type": "debug",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "18870580aeb45b99",
+        "type": "template",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "demo/{{req.query.key}}",
+        "output": "str",
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "8a3182a40a08e3e1",
+                "5eaf02a2a0dae3a4",
+                "643a90a7d82c4fdd"
             ]
         ]
     }
