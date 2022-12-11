@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "ac3e5cb0db857b11",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3c9fafa.7dd6a5",
         "type": "mqtt-broker",
         "name": "",
@@ -338,10 +346,11 @@
         "type": "mqtt-broker",
         "name": "",
         "broker": "97.107.140.214",
-        "port": "1883",
+        "port": "8883",
+        "tls": "5820695c38c1949d",
         "clientid": "",
         "autoConnect": true,
-        "usetls": false,
+        "usetls": true,
         "protocolVersion": "4",
         "keepalive": "60",
         "cleansession": true,
@@ -367,6 +376,49 @@
         "type": "mqtt-broker",
         "name": "",
         "broker": "172.104.125.99",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5820695c38c1949d",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "nats.edge-cloud.io",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "35234d7f85e97e65",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -474,7 +526,7 @@
         "type": "debug",
         "z": "48b4356fe2e4f9db",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -751,25 +803,14 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
-        "y": 80,
+        "x": 250,
+        "y": 60,
         "wires": [
             [
                 "1c812942b8d87c64",
                 "2b62d5fc96f416c8"
             ]
         ]
-    },
-    {
-        "id": "643a90a7d82c4fdd",
-        "type": "http response",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 610,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "8a3182a40a08e3e1",
@@ -784,9 +825,9 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "b9d7a5a759ecc028",
-        "x": 110,
-        "y": 260,
+        "broker": "35234d7f85e97e65",
+        "x": 330,
+        "y": 340,
         "wires": []
     },
     {
@@ -794,7 +835,7 @@
         "type": "debug",
         "z": "4bdffad5d958d50f",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -811,7 +852,7 @@
         "type": "debug",
         "z": "4bdffad5d958d50f",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -893,8 +934,38 @@
         "y": 200,
         "wires": [
             [
-                "8a3182a40a08e3e1",
-                "643a90a7d82c4fdd"
+                "8a3182a40a08e3e1"
+            ]
+        ]
+    },
+    {
+        "id": "f394b63085388308",
+        "type": "inject",
+        "z": "4bdffad5d958d50f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.key",
+                "v": "testkey",
+                "vt": "str"
+            },
+            {
+                "p": "payload.object",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": ".1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 80,
+        "y": 60,
+        "wires": [
+            [
+                "2b62d5fc96f416c8"
             ]
         ]
     },
@@ -1273,7 +1344,7 @@
         "type": "debug",
         "z": "91f91a20edc0ca3f",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
