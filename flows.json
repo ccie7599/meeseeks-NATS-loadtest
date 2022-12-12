@@ -40,14 +40,6 @@
         "env": []
     },
     {
-        "id": "ac3e5cb0db857b11",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "3c9fafa.7dd6a5",
         "type": "mqtt-broker",
         "name": "",
@@ -303,14 +295,6 @@
         "tls": "",
         "wholemsg": "false",
         "hb": "30"
-    },
-    {
-        "id": "e432a63436899760",
-        "type": "natsio-server",
-        "name": "",
-        "host": "192.168.1.105",
-        "port": "4222",
-        "json": true
     },
     {
         "id": "b9d7a5a759ecc028",
@@ -825,7 +809,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "35234d7f85e97e65",
+        "broker": "b9d7a5a759ecc028",
         "x": 330,
         "y": 340,
         "wires": []
