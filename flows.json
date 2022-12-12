@@ -85,161 +85,10 @@
         "alpnprotocol": ""
     },
     {
-        "id": "cb2f7c9a2ceaaf2c",
-        "type": "ui_tab",
-        "name": "Latency",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "54f7ecc644f21e27",
-        "type": "ui_group",
-        "name": "Latency Results",
-        "tab": "cb2f7c9a2ceaaf2c",
-        "order": 1,
-        "disp": true,
-        "width": "18",
-        "collapse": false
-    },
-    {
-        "id": "a5ecdab7.7197d8",
-        "type": "ui_group",
-        "name": "Odds Card",
-        "tab": "16e47346.ac956d",
-        "order": 1,
-        "disp": true,
-        "width": "16",
-        "collapse": false
-    },
-    {
-        "id": "16e47346.ac956d",
-        "type": "ui_tab",
-        "name": "Real Time Event API",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "cbee2f0fcd121e2d",
         "type": "websocket-listener",
         "path": "/ws",
         "wholemsg": "false"
-    },
-    {
-        "id": "eb58dbee76747e0d",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "5914d7abbf8a72fb",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ade16b1ef95b9168",
-        "type": "ui_group",
-        "name": "API Client ",
-        "tab": "5914d7abbf8a72fb",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "c0d8752cab84aea3",
@@ -269,24 +118,6 @@
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
-    },
-    {
-        "id": "ce4ae89e62a543ba",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "16b957b7349f2c6f",
-        "type": "ui_group",
-        "name": "Publish Client ",
-        "tab": "ce4ae89e62a543ba",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "b803d1536177ccc3",
@@ -426,6 +257,157 @@
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
+    },
+    {
+        "id": "bc33345ff7f2c43f",
+        "type": "ui_tab",
+        "name": "Latency",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7dbf7498dec0c601",
+        "type": "ui_group",
+        "name": "Comparison ",
+        "tab": "bc33345ff7f2c43f",
+        "order": 1,
+        "disp": true,
+        "width": 18,
+        "collapse": false
+    },
+    {
+        "id": "722cec5e786df024",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "90751abf4e0ad92f",
+        "type": "ui_tab",
+        "name": "API Client ",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "334dc92abee939a4",
+        "type": "ui_group",
+        "name": "API Client ",
+        "tab": "90751abf4e0ad92f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "63b8a107d9469faf",
+        "type": "ui_tab",
+        "name": "Worldmap",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4032358b6e900f75",
+        "type": "ui_group",
+        "name": "Worldmap",
+        "tab": "63b8a107d9469faf",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
     },
     {
         "id": "7fd7ee0be984bd15",
@@ -575,7 +557,7 @@
         "wires": [
             [
                 "aec7abb9cc02c7ac",
-                "cb3e72f4d24db3dd"
+                "4201c19b11abba31"
             ]
         ]
     },
@@ -708,23 +690,6 @@
         ]
     },
     {
-        "id": "cb3e72f4d24db3dd",
-        "type": "json",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 310,
-        "y": 180,
-        "wires": [
-            [
-                "4201c19b11abba31",
-                "63d1fdb5efef3abd"
-            ]
-        ]
-    },
-    {
         "id": "77b829269cfc5e7a",
         "type": "change",
         "z": "48b4356fe2e4f9db",
@@ -776,6 +741,43 @@
             [
                 "70f06812bfa289ce"
             ]
+        ]
+    },
+    {
+        "id": "0b78962cc303296f",
+        "type": "mqtt in",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "topic": "demo/api/stream/map",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "b9d7a5a759ecc028",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "0cf34f5827fe9ad2"
+            ]
+        ]
+    },
+    {
+        "id": "0cf34f5827fe9ad2",
+        "type": "file",
+        "z": "48b4356fe2e4f9db",
+        "name": "",
+        "filename": "/data/msg/mapdata",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 820,
+        "y": 440,
+        "wires": [
+            []
         ]
     },
     {
@@ -954,43 +956,6 @@
         ]
     },
     {
-        "id": "29ce28610c9e7d94",
-        "type": "ui_form",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "label": "",
-        "group": "ade16b1ef95b9168",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Request ",
-                "value": "key",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "key": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "x": 110,
-        "y": 60,
-        "wires": [
-            [
-                "bce758247775ed53",
-                "a27d35f03ab96164"
-            ]
-        ]
-    },
-    {
         "id": "f00e7633ccde2d4d",
         "type": "http request",
         "z": "fe87260a2a0e6208",
@@ -1045,22 +1010,6 @@
         "statusType": "auto",
         "x": 530,
         "y": 140,
-        "wires": []
-    },
-    {
-        "id": "e2523516204da0f3",
-        "type": "ui_text",
-        "z": "fe87260a2a0e6208",
-        "group": "ade16b1ef95b9168",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 110,
-        "y": 260,
         "wires": []
     },
     {
@@ -1158,7 +1107,6 @@
         "y": 220,
         "wires": [
             [
-                "e2523516204da0f3",
                 "092c377f318934b8"
             ]
         ]
@@ -1181,6 +1129,42 @@
         "wires": []
     },
     {
+        "id": "b85c95c7b0fe21d0",
+        "type": "ui_form",
+        "z": "fe87260a2a0e6208",
+        "name": "",
+        "label": "",
+        "group": "334dc92abee939a4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Key",
+                "value": "Key",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Key": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "a27d35f03ab96164"
+            ]
+        ]
+    },
+    {
         "id": "9e9c2b899fe9c55a",
         "type": "http request",
         "z": "bb57a429bedabd77",
@@ -1199,50 +1183,6 @@
         "wires": [
             [
                 "a30213c27f0166ad"
-            ]
-        ]
-    },
-    {
-        "id": "d7e11e676ccec14f",
-        "type": "ui_form",
-        "z": "bb57a429bedabd77",
-        "name": "",
-        "label": "",
-        "group": "16b957b7349f2c6f",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "key",
-                "value": "key",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "value",
-                "value": "object",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "key": "",
-            "object": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "x": 130,
-        "y": 80,
-        "wires": [
-            [
-                "f9755946d49691b9"
             ]
         ]
     },
@@ -1400,5 +1340,482 @@
                 "baf5d10ac6201628"
             ]
         ]
+    },
+    {
+        "id": "456553326a4bb6df",
+        "type": "random",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "low": "44",
+        "high": "45.5",
+        "inte": "false",
+        "property": "payload.lat",
+        "x": 280,
+        "y": 420,
+        "wires": [
+            [
+                "7f982a6d54ac41d4"
+            ]
+        ]
+    },
+    {
+        "id": "7f982a6d54ac41d4",
+        "type": "random",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "low": "-85",
+        "high": "-84",
+        "inte": "false",
+        "property": "payload.lon",
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "2cc385355db9cc92"
+            ]
+        ]
+    },
+    {
+        "id": "61781d92f6b5cff3",
+        "type": "random",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "low": 1,
+        "high": "100000",
+        "inte": "true",
+        "property": "payload.name",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "456553326a4bb6df"
+            ]
+        ]
+    },
+    {
+        "id": "c28d299fcaf15df2",
+        "type": "inject",
+        "z": "91f91a20edc0ca3f",
+        "d": true,
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "61781d92f6b5cff3"
+            ]
+        ]
+    },
+    {
+        "id": "c55291f279e1cbc8",
+        "type": "mqtt out",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "topic": "demo/api/stream/map",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b9d7a5a759ecc028",
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2cc385355db9cc92",
+        "type": "change",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.key",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 500,
+        "wires": [
+            [
+                "c55291f279e1cbc8"
+            ]
+        ]
+    },
+    {
+        "id": "1c944cfb1ed5a910",
+        "type": "http request",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://nats.edge-cloud.io/api?key=mapdata",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 490,
+        "y": 720,
+        "wires": [
+            [
+                "fcac2ba9614c6329",
+                "f4c2fce975256a0b"
+            ]
+        ]
+    },
+    {
+        "id": "8d6d993767000d7a",
+        "type": "inject",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "1315bbe6f9c07cb1"
+            ]
+        ]
+    },
+    {
+        "id": "fcac2ba9614c6329",
+        "type": "split",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 580,
+        "y": 660,
+        "wires": [
+            [
+                "c1ab1cc143774ed7"
+            ]
+        ]
+    },
+    {
+        "id": "e6e8d06679fa9e59",
+        "type": "debug",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c1ab1cc143774ed7",
+        "type": "json",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 730,
+        "y": 640,
+        "wires": [
+            [
+                "e6e8d06679fa9e59",
+                "16bb7d7be0c45273"
+            ]
+        ]
+    },
+    {
+        "id": "50ef750ae90b31bf",
+        "type": "http request",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://fremont.nats.edge-cloud.io/api?key=mapdata",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 250,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1315bbe6f9c07cb1",
+        "type": "change",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "starttime",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "1c944cfb1ed5a910",
+                "50ef750ae90b31bf"
+            ]
+        ]
+    },
+    {
+        "id": "4df7bb8ae9ac5c9f",
+        "type": "function",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "func": "var sent = msg.starttime\nvar received = Date.now()\nmsg.payload = received - sent \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 900,
+        "wires": [
+            [
+                "14ed6e868d6e0149"
+            ]
+        ]
+    },
+    {
+        "id": "f4c2fce975256a0b",
+        "type": "function",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "func": "var sent = msg.starttime\nvar received = Date.now()\nmsg.payload = received - sent \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 800,
+        "wires": [
+            [
+                "dc30daca99f0c7ee"
+            ]
+        ]
+    },
+    {
+        "id": "dc30daca99f0c7ee",
+        "type": "change",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Akamai Edge Cloud",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 820,
+        "wires": [
+            [
+                "3824ecf452a4ef8e",
+                "31d63eb170ac582f"
+            ]
+        ]
+    },
+    {
+        "id": "14ed6e868d6e0149",
+        "type": "change",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Legacy Cloud",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 860,
+        "wires": [
+            [
+                "3824ecf452a4ef8e",
+                "31d63eb170ac582f"
+            ]
+        ]
+    },
+    {
+        "id": "3824ecf452a4ef8e",
+        "type": "debug",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "31d63eb170ac582f",
+        "type": "ui_chart",
+        "z": "91f91a20edc0ca3f",
+        "name": "Comparsion - Akamai Edge Cloud vs. Legacy Cloud ",
+        "group": "7dbf7498dec0c601",
+        "order": 2,
+        "width": 18,
+        "height": 10,
+        "label": "Latency in ms ",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 880,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5a4e366f69b31df",
+        "type": "ui_button",
+        "z": "91f91a20edc0ca3f",
+        "name": "",
+        "group": "7dbf7498dec0c601",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Request Data from Edge Cloud and Traditonal Cloud ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "1315bbe6f9c07cb1",
+                "4df7bb8ae9ac5c9f"
+            ]
+        ]
+    },
+    {
+        "id": "16bb7d7be0c45273",
+        "type": "ui_worldmap",
+        "z": "91f91a20edc0ca3f",
+        "group": "4032358b6e900f75",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "lat": "45",
+        "lon": "-85",
+        "zoom": "9",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 890,
+        "y": 580,
+        "wires": []
     }
 ]
