@@ -392,18 +392,10 @@
         "collapse": false
     },
     {
-        "id": "63b8a107d9469faf",
-        "type": "ui_tab",
-        "name": "Worldmap",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "4032358b6e900f75",
         "type": "ui_group",
         "name": "Worldmap",
-        "tab": "63b8a107d9469faf",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "13",
@@ -1492,8 +1484,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "str",
-        "x": 160,
-        "y": 580,
+        "x": 190,
+        "y": 540,
         "wires": [
             [
                 "1315bbe6f9c07cb1"
@@ -1547,8 +1539,7 @@
         "y": 640,
         "wires": [
             [
-                "e6e8d06679fa9e59",
-                "16bb7d7be0c45273"
+                "e6e8d06679fa9e59"
             ]
         ]
     },
@@ -1569,7 +1560,9 @@
         "x": 250,
         "y": 800,
         "wires": [
-            []
+            [
+                "4df7bb8ae9ac5c9f"
+            ]
         ]
     },
     {
@@ -1748,8 +1741,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 880,
-        "y": 940,
+        "x": 700,
+        "y": 960,
         "wires": [
             []
         ]
@@ -1773,49 +1766,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 220,
-        "y": 640,
+        "x": 200,
+        "y": 620,
         "wires": [
             [
-                "1315bbe6f9c07cb1",
-                "4df7bb8ae9ac5c9f"
+                "1315bbe6f9c07cb1"
             ]
         ]
-    },
-    {
-        "id": "16bb7d7be0c45273",
-        "type": "ui_worldmap",
-        "z": "91f91a20edc0ca3f",
-        "group": "4032358b6e900f75",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "lat": "45",
-        "lon": "-85",
-        "zoom": "9",
-        "layer": "OSMG",
-        "cluster": "",
-        "maxage": "",
-        "usermenu": "hide",
-        "layers": "hide",
-        "panit": "false",
-        "panlock": "false",
-        "zoomlock": "false",
-        "hiderightclick": "true",
-        "coords": "none",
-        "showgrid": "false",
-        "showruler": "false",
-        "allowFileDrop": "false",
-        "path": "/worldmap",
-        "overlist": "DR,CO,RA,DN,HM",
-        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
-        "mapname": "",
-        "mapurl": "",
-        "mapopt": "",
-        "mapwms": false,
-        "x": 890,
-        "y": 580,
-        "wires": []
     }
 ]
