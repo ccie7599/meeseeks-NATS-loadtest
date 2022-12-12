@@ -102,7 +102,7 @@ credentialSecret: false,
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specify a different root path.
     // If set to false, this is disabled.
-    //httpAdminRoot: '/admin',
+ httpAdminRoot: '/admin',
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
@@ -131,10 +131,10 @@ credentialSecret: false,
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
     // property can be used. See http://nodered.org/docs/security.html for details.
-   adminAuth: {
+ adminAuth: {
    type: "credentials",
    users: [{
-   username: "bapley",
+    username: "bapley",
     password: "$2b$08$FvEdlmqVVxaMOK1MD7qIPOwC.rmz4FYhjWx9WTQ7U0dmQfEoONJw6",
     permissions: "*"
         }]
