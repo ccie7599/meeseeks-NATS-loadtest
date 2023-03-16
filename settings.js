@@ -135,7 +135,7 @@ credentialSecret: false,
    type: "credentials",
    users: [{
     username: "bapley",
-    password: "$2b$08$FvEdlmqVVxaMOK1MD7qIPOwC.rmz4FYhjWx9WTQ7U0dmQfEoONJw6",
+    password: "$2b$08$5StmVDKAwmmYCuV5zA7eKuCGKPh7AweNYf0U5mjyVs22ABmke.e32",
     permissions: "*"
         }]
     },
