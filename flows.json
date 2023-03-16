@@ -1,40 +1,8 @@
 [
     {
-        "id": "48b4356fe2e4f9db",
+        "id": "7e60f05f61217f17",
         "type": "tab",
-        "label": "Event API",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "4bdffad5d958d50f",
-        "type": "tab",
-        "label": "Event Publisher",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "fe87260a2a0e6208",
-        "type": "tab",
-        "label": "Event Client ",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "bb57a429bedabd77",
-        "type": "tab",
-        "label": "publish client",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "91f91a20edc0ca3f",
-        "type": "tab",
-        "label": "websockets client ",
+        "label": "nats",
         "disabled": false,
         "info": "",
         "env": []
@@ -402,1295 +370,253 @@
         "collapse": false
     },
     {
-        "id": "7fd7ee0be984bd15",
-        "type": "http in",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "url": "/api",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 80,
-        "y": 40,
-        "wires": [
-            [
-                "77b829269cfc5e7a"
-            ]
-        ]
+        "id": "bb0d607cd4ea3165",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io1",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "067a9ae216cf5cb1",
-        "type": "http response",
-        "z": "48b4356fe2e4f9db",
-        "name": "Return Retained message on {sku} topic to API consumer",
-        "statusCode": "",
-        "headers": {},
-        "x": 250,
-        "y": 320,
-        "wires": []
+        "id": "4eba4d681fc2c164",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io2",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "70f06812bfa289ce",
-        "type": "websocket out",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "server": "cbee2f0fcd121e2d",
-        "client": "",
-        "x": 400,
-        "y": 540,
-        "wires": []
+        "id": "210a23782eac29c7",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io3",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "63d1fdb5efef3abd",
-        "type": "debug",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 180,
-        "wires": []
+        "id": "919783a27c4dd988",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io4",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "384b89c6e5f8a3eb",
-        "type": "mqtt in",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "topic": "demo/api/stream/#",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "b9d7a5a759ecc028",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 170,
-        "y": 500,
-        "wires": [
-            [
-                "e4ef548d6b8d59bf",
-                "82ac385f12aec07a"
-            ]
-        ]
+        "id": "d86249eafb4e802e",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io5",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "683335b90068e1e5",
-        "type": "debug",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 350,
-        "y": 600,
-        "wires": []
+        "id": "ff67fbace7c395fa",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io6",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "71fc67cc1d2c1698",
-        "type": "file",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "filename": "",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 140,
-        "y": 600,
-        "wires": [
-            [
-                "683335b90068e1e5"
-            ]
-        ]
+        "id": "3508c63e091964d3",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io7",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "e4ef548d6b8d59bf",
-        "type": "template",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "field": "filename",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "/data/msg/{{payload.key}}",
-        "output": "str",
-        "x": 140,
-        "y": 560,
-        "wires": [
-            [
-                "71fc67cc1d2c1698"
-            ]
-        ]
+        "id": "4498c1c38124177e",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io8",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "ae2a806db270ac1b",
-        "type": "file in",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 320,
-        "y": 140,
-        "wires": [
-            [
-                "aec7abb9cc02c7ac",
-                "4201c19b11abba31"
-            ]
-        ]
+        "id": "ec02288197e65f92",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io9",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "f02b4941ee65e3e1",
-        "type": "template",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "field": "filename",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "/data/msg/{{payload.key}}",
-        "output": "str",
-        "x": 80,
-        "y": 120,
-        "wires": [
-            [
-                "6839a47b1c370f7a"
-            ]
-        ]
+        "id": "c9f441be3da373d2",
+        "type": "natsio-server",
+        "name": "nats.connected-cloud.io10",
+        "host": "nats.connected-cloud.io",
+        "port": "4222",
+        "json": true
     },
     {
-        "id": "aec7abb9cc02c7ac",
-        "type": "debug",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "6839a47b1c370f7a",
-        "type": "exec",
-        "z": "48b4356fe2e4f9db",
-        "command": "ls",
-        "addpay": "filename",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 70,
-        "y": 160,
-        "wires": [
-            [
-                "ae2a806db270ac1b"
-            ],
-            [
-                "04c99f965d0920c6"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "04c99f965d0920c6",
-        "type": "change",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.api.response",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            },
-            {
-                "t": "set",
-                "p": "payload.object",
-                "pt": "msg",
-                "to": "no key found ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 80,
+        "id": "601f881dc3875b2e",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "bb0d607cd4ea3165",
+        "subject": "",
+        "message": "",
+        "x": 440,
         "y": 220,
-        "wires": [
-            [
-                "067a9ae216cf5cb1"
-            ]
-        ]
-    },
-    {
-        "id": "4201c19b11abba31",
-        "type": "change",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.api.response",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            },
-            {
-                "t": "set",
-                "p": "payload.api.request",
-                "pt": "msg",
-                "to": "api.request",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 220,
-        "wires": [
-            [
-                "067a9ae216cf5cb1"
-            ]
-        ]
-    },
-    {
-        "id": "77b829269cfc5e7a",
-        "type": "change",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "api.request",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 110,
-        "y": 80,
-        "wires": [
-            [
-                "f02b4941ee65e3e1"
-            ]
-        ]
-    },
-    {
-        "id": "82ac385f12aec07a",
-        "type": "change",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.ws.sent",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 500,
-        "wires": [
-            [
-                "70f06812bfa289ce"
-            ]
-        ]
-    },
-    {
-        "id": "0b78962cc303296f",
-        "type": "mqtt in",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "topic": "demo/api/stream/map",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "b9d7a5a759ecc028",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 560,
-        "y": 380,
-        "wires": [
-            [
-                "0cf34f5827fe9ad2"
-            ]
-        ]
-    },
-    {
-        "id": "0cf34f5827fe9ad2",
-        "type": "file",
-        "z": "48b4356fe2e4f9db",
-        "name": "",
-        "filename": "/data/msg/mapdata",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 820,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d02cd741e6b0fd7",
-        "type": "http in",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "url": "/publish",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 250,
-        "y": 60,
-        "wires": [
-            [
-                "1c812942b8d87c64",
-                "2b62d5fc96f416c8"
-            ]
-        ]
-    },
-    {
-        "id": "8a3182a40a08e3e1",
-        "type": "mqtt out",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "topic": "",
-        "qos": "1",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "b9d7a5a759ecc028",
-        "x": 330,
-        "y": 340,
         "wires": []
     },
     {
-        "id": "5eaf02a2a0dae3a4",
-        "type": "debug",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 470,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "1c812942b8d87c64",
-        "type": "debug",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 470,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "18870580aeb45b99",
-        "type": "template",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "field": "topic",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "demo/api/stream/{{payload.key}}",
-        "output": "str",
-        "x": 120,
-        "y": 160,
-        "wires": [
-            [
-                "5eaf02a2a0dae3a4",
-                "385f60451b4e975f"
-            ]
-        ]
-    },
-    {
-        "id": "2b62d5fc96f416c8",
-        "type": "change",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.publish.receive",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 190,
-        "y": 120,
-        "wires": [
-            [
-                "18870580aeb45b99"
-            ]
-        ]
-    },
-    {
-        "id": "385f60451b4e975f",
-        "type": "change",
-        "z": "4bdffad5d958d50f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.publish.complete",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 200,
-        "wires": [
-            [
-                "8a3182a40a08e3e1"
-            ]
-        ]
-    },
-    {
-        "id": "f394b63085388308",
+        "id": "7750509a959af8fe",
         "type": "inject",
-        "z": "4bdffad5d958d50f",
+        "z": "7e60f05f61217f17",
         "name": "",
         "props": [
             {
-                "p": "payload.key",
-                "v": "testkey",
-                "vt": "str"
-            },
-            {
-                "p": "payload.object",
+                "p": "payload.timestamp",
                 "v": "",
                 "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": ".1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 80,
-        "y": 60,
-        "wires": [
-            [
-                "2b62d5fc96f416c8"
-            ]
-        ]
-    },
-    {
-        "id": "f00e7633ccde2d4d",
-        "type": "http request",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "query",
-        "url": "http://127.0.0.1:1880/api",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "ed954cd86fb0608e",
-                "5bfad8282bb756c4"
-            ]
-        ]
-    },
-    {
-        "id": "bce758247775ed53",
-        "type": "debug",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "ed954cd86fb0608e",
-        "type": "debug",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "a27d35f03ab96164",
-        "type": "change",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "api.start",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 150,
-        "y": 100,
-        "wires": [
-            [
-                "f00e7633ccde2d4d"
-            ]
-        ]
-    },
-    {
-        "id": "5bfad8282bb756c4",
-        "type": "change",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.api.complete",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            },
-            {
-                "t": "set",
-                "p": "payload.api.start",
-                "pt": "msg",
-                "to": "api.start",
-                "tot": "msg",
-                "dc": true
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 140,
-        "y": 180,
-        "wires": [
-            [
-                "197ee78fd79f0cb2",
-                "b2d0dab1d9e65d82"
-            ]
-        ]
-    },
-    {
-        "id": "197ee78fd79f0cb2",
-        "type": "debug",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b2d0dab1d9e65d82",
-        "type": "function",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "func": "var request = msg.payload.api.start\nvar received = msg.payload.api.complete\nmsg.payload.api.latency = received - request \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 120,
-        "y": 220,
-        "wires": [
-            [
-                "092c377f318934b8"
-            ]
-        ]
-    },
-    {
-        "id": "092c377f318934b8",
-        "type": "debug",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "b85c95c7b0fe21d0",
-        "type": "ui_form",
-        "z": "fe87260a2a0e6208",
-        "name": "",
-        "label": "",
-        "group": "334dc92abee939a4",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Key",
-                "value": "Key",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "Key": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "x": 110,
-        "y": 40,
-        "wires": [
-            [
-                "a27d35f03ab96164"
-            ]
-        ]
-    },
-    {
-        "id": "9e9c2b899fe9c55a",
-        "type": "http request",
-        "z": "bb57a429bedabd77",
-        "name": "",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "query",
-        "url": "http://127.0.0.1:1880/publish",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 150,
-        "y": 160,
-        "wires": [
-            [
-                "a30213c27f0166ad"
-            ]
-        ]
-    },
-    {
-        "id": "f9755946d49691b9",
-        "type": "change",
-        "z": "bb57a429bedabd77",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.publish.start",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
+        "topic": "test",
         "x": 210,
-        "y": 120,
-        "wires": [
-            [
-                "9e9c2b899fe9c55a",
-                "573fc909be874f38"
-            ]
-        ]
-    },
-    {
-        "id": "a30213c27f0166ad",
-        "type": "debug",
-        "z": "bb57a429bedabd77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "573fc909be874f38",
-        "type": "debug",
-        "z": "bb57a429bedabd77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "368216f6b9e3960f",
-        "type": "websocket in",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "server": "",
-        "client": "b803d1536177ccc3",
-        "x": 160,
-        "y": 60,
-        "wires": [
-            [
-                "a008d4951a83eddc"
-            ]
-        ]
-    },
-    {
-        "id": "baf5d10ac6201628",
-        "type": "debug",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 450,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "a008d4951a83eddc",
-        "type": "json",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 90,
-        "y": 120,
-        "wires": [
-            [
-                "0903c46638f211e7"
-            ]
-        ]
-    },
-    {
-        "id": "0903c46638f211e7",
-        "type": "change",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.ws.received",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 160,
-        "y": 180,
-        "wires": [
-            [
-                "7bc6a8718f3cd290"
-            ]
-        ]
-    },
-    {
-        "id": "7bc6a8718f3cd290",
-        "type": "function",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "func": "var sent = msg.payload.ws.sent\nvar received = msg.payload.ws.received\nmsg.payload.ws.latency = received - sent \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 100,
-        "y": 220,
-        "wires": [
-            [
-                "baf5d10ac6201628"
-            ]
-        ]
-    },
-    {
-        "id": "456553326a4bb6df",
-        "type": "random",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "low": "44",
-        "high": "45.5",
-        "inte": "false",
-        "property": "payload.lat",
-        "x": 280,
-        "y": 420,
-        "wires": [
-            [
-                "7f982a6d54ac41d4"
-            ]
-        ]
-    },
-    {
-        "id": "7f982a6d54ac41d4",
-        "type": "random",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "low": "-85",
-        "high": "-84",
-        "inte": "false",
-        "property": "payload.lon",
-        "x": 430,
-        "y": 420,
-        "wires": [
-            [
-                "2cc385355db9cc92"
-            ]
-        ]
-    },
-    {
-        "id": "61781d92f6b5cff3",
-        "type": "random",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "low": 1,
-        "high": "100000",
-        "inte": "true",
-        "property": "payload.name",
-        "x": 270,
-        "y": 340,
-        "wires": [
-            [
-                "456553326a4bb6df"
-            ]
-        ]
-    },
-    {
-        "id": "c28d299fcaf15df2",
-        "type": "inject",
-        "z": "91f91a20edc0ca3f",
-        "d": true,
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 280,
-        "wires": [
-            [
-                "61781d92f6b5cff3"
-            ]
-        ]
-    },
-    {
-        "id": "c55291f279e1cbc8",
-        "type": "mqtt out",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "topic": "demo/api/stream/map",
-        "qos": "1",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "b9d7a5a759ecc028",
-        "x": 730,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "2cc385355db9cc92",
-        "type": "change",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.key",
-                "pt": "msg",
-                "to": "payload.name",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
         "y": 500,
         "wires": [
             [
-                "c55291f279e1cbc8"
+                "601f881dc3875b2e",
+                "e1758615d69a41aa",
+                "9c72aec18178eeb5",
+                "658c0c65756f6479",
+                "e7c8c6841cc7664f",
+                "7b98eb503e95fec0",
+                "bd21a82a81ae6936",
+                "79aefbc9154f5b24",
+                "02cc52da5eda6e08",
+                "d0ee54091923dfc7"
             ]
         ]
     },
     {
-        "id": "1c944cfb1ed5a910",
-        "type": "http request",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://nats.edge-cloud.io/api?key=mapdata",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 490,
-        "y": 720,
-        "wires": [
-            [
-                "fcac2ba9614c6329",
-                "f4c2fce975256a0b"
-            ]
-        ]
-    },
-    {
-        "id": "8d6d993767000d7a",
-        "type": "inject",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 190,
-        "y": 540,
-        "wires": [
-            [
-                "1315bbe6f9c07cb1"
-            ]
-        ]
-    },
-    {
-        "id": "fcac2ba9614c6329",
-        "type": "split",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 580,
-        "y": 660,
-        "wires": [
-            [
-                "c1ab1cc143774ed7"
-            ]
-        ]
-    },
-    {
-        "id": "e6e8d06679fa9e59",
-        "type": "debug",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 740,
+        "id": "e1758615d69a41aa",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "4eba4d681fc2c164",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "c1ab1cc143774ed7",
-        "type": "json",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 730,
-        "y": 640,
-        "wires": [
-            [
-                "e6e8d06679fa9e59"
-            ]
-        ]
+        "id": "9c72aec18178eeb5",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "210a23782eac29c7",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 380,
+        "wires": []
     },
     {
-        "id": "50ef750ae90b31bf",
-        "type": "http request",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://fremont.nats.edge-cloud.io/api?key=mapdata",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "senderr": false,
-        "x": 250,
-        "y": 800,
-        "wires": [
-            [
-                "4df7bb8ae9ac5c9f"
-            ]
-        ]
+        "id": "658c0c65756f6479",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "919783a27c4dd988",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 440,
+        "wires": []
     },
     {
-        "id": "1315bbe6f9c07cb1",
-        "type": "change",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "starttime",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
+        "id": "e7c8c6841cc7664f",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "d86249eafb4e802e",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7b98eb503e95fec0",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "ff67fbace7c395fa",
+        "subject": "",
+        "message": "",
+        "x": 440,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "bd21a82a81ae6936",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "3508c63e091964d3",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "79aefbc9154f5b24",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "4498c1c38124177e",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "02cc52da5eda6e08",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "ec02288197e65f92",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d0ee54091923dfc7",
+        "type": "natsio-pub",
+        "z": "7e60f05f61217f17",
+        "server": "c9f441be3da373d2",
+        "subject": "",
+        "message": "",
+        "x": 440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "33e3cbb774c02aa5",
+        "type": "natsio-sub",
+        "z": "7e60f05f61217f17",
+        "server": "bb0d607cd4ea3165",
+        "subject": ">",
+        "maxWanted": "",
+        "queue": "",
+        "x": 670,
+        "y": 300,
         "wires": [
             [
-                "1c944cfb1ed5a910",
-                "50ef750ae90b31bf"
+                "99cb85323884ab67"
             ]
         ]
     },
     {
-        "id": "4df7bb8ae9ac5c9f",
-        "type": "function",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "func": "var sent = msg.starttime\nvar received = Date.now()\nmsg.payload = received - sent \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 900,
-        "wires": [
-            [
-                "14ed6e868d6e0149"
-            ]
-        ]
-    },
-    {
-        "id": "f4c2fce975256a0b",
-        "type": "function",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "func": "var sent = msg.starttime\nvar received = Date.now()\nmsg.payload = received - sent \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 800,
-        "wires": [
-            [
-                "dc30daca99f0c7ee"
-            ]
-        ]
-    },
-    {
-        "id": "dc30daca99f0c7ee",
-        "type": "change",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Akamai Edge Cloud",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 820,
-        "wires": [
-            [
-                "3824ecf452a4ef8e",
-                "31d63eb170ac582f"
-            ]
-        ]
-    },
-    {
-        "id": "14ed6e868d6e0149",
-        "type": "change",
-        "z": "91f91a20edc0ca3f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Legacy Cloud",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 860,
-        "wires": [
-            [
-                "3824ecf452a4ef8e",
-                "31d63eb170ac582f"
-            ]
-        ]
-    },
-    {
-        "id": "3824ecf452a4ef8e",
+        "id": "7b81f22962c3442b",
         "type": "debug",
-        "z": "91f91a20edc0ca3f",
+        "z": "7e60f05f61217f17",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -1700,77 +626,26 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 880,
+        "x": 1010,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "31d63eb170ac582f",
-        "type": "ui_chart",
-        "z": "91f91a20edc0ca3f",
-        "name": "Comparsion - Akamai Edge Cloud vs. Legacy Cloud ",
-        "group": "7dbf7498dec0c601",
-        "order": 2,
-        "width": 18,
-        "height": 10,
-        "label": "Latency in ms ",
-        "chartType": "bar",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "1000",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 700,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b5a4e366f69b31df",
-        "type": "ui_button",
-        "z": "91f91a20edc0ca3f",
+        "id": "99cb85323884ab67",
+        "type": "counter",
+        "z": "7e60f05f61217f17",
         "name": "",
-        "group": "7dbf7498dec0c601",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Request Data from Edge Cloud and Traditonal Cloud ",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 200,
-        "y": 620,
+        "init": "0",
+        "step": "1",
+        "lower": null,
+        "upper": null,
+        "mode": "increment",
+        "outputs": "1",
+        "x": 860,
+        "y": 300,
         "wires": [
             [
-                "1315bbe6f9c07cb1"
+                "7b81f22962c3442b"
             ]
         ]
     }
