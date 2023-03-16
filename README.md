@@ -1,4 +1,2 @@
-eventapi
+Meeseeks NATS Loadtest
 ======================
-
-### Meeseeks NATS Loadtest
